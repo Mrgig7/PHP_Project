@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Background Image */
+.bg-hero-pattern {
+  background-image: url('./assets/trial.jpeg');
+  background-size: cover;
+  background-position: center;
+  animation: backgroundPan 15s linear infinite;
+}
+
+/* Custom Background for About Us Page */
+.bg-about-pattern {
+  background-image: url('./assets/trial_2.jpeg'); /* Placeholder image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Parallax Effect for Background */
+@keyframes backgroundPan {
+  from { background-position: 0% center; }
+  to { background-position: 100% center; }
+}
+
+@layer utilities {
+    /* Fade-in Animation */
+    .animate-fade-in {
+        animation: fadeIn 2s ease-in-out forwards;
+    }
+    .animate-fade-in-delay {
+        animation: fadeIn 2s ease-in-out 1s forwards; 
+    }
+
+    /* Slide-down Animation */
+    .animate-slide-down {
+        animation: slideDown 1.5s ease-out forwards;
+    }
+
+    /* Bounce Animation for Button */
+    .animate-bounce {
+        animation: bounce 1.5s infinite;
+    }
+
+    /* Slide-up Animation for Product Cards */
+    .animate-slide-up {
+        animation: slideUp 1.5s ease-in-out forwards;
+    }
+
+    /* Team Card Hover Scale */
+    .hover-scale {
+        transition: transform 0.3s ease-in-out;
+    }
+    .hover-scale:hover {
+        transform: scale(1.05);
+    }
+
+    /* Keyframes */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+        from { transform: translateY(-30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+
+    /* Slide-in Animation for Team Cards */
+    .animate-slide-up-team {
+        animation: slideUpTeam 1.5s ease-in-out forwards;
+    }
+
+    @keyframes slideUpTeam {
+        from { transform: translateY(50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+}
+
+.bg-hero {
+  background-image: url('./assets/hero_1.jpeg'); /* Update the path as necessary */
+  background-size: cover;
+  background-position: center;
+}

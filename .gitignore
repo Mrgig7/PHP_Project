@@ -1,0 +1,10 @@
+# Ignore frontend-specific files
+frontend/node_modules/
+frontend/dist/
+frontend/public/
+
+# Ignore environment variables
+backend/.env
+
+# Ignore Composer dependencies in backend
+backend/vendor/
